@@ -1,0 +1,22 @@
+{
+    "name": "howtocodewell/doctrine-entity-traits",
+    "type": "package",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+            "HowToCodeWell\\Entity\\Traits\\": "src/entity/traits"
+        }
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpstan/phpstan": "^0.12.14"
+    },
+    "require": {
+        "php": ">=7.2",
+        "ramsey/uuid": "^3.9",
+        "doctrine/orm": "^2.7"
+    }
+
+}
