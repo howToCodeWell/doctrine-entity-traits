@@ -21,7 +21,7 @@ trait TimestampableTrait
 
     /**
      * @var DateTime
-     * @ORM\Column(type="datetime", options={"default"="CURRENT_TIMESTAMP"}))
+     * @ORM\Column(type="datetime", options={"default"="CURRENT_TIMESTAMP"})
      */
     private $creationDate;
 
