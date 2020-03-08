@@ -6,7 +6,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "HowToCodeWell\\Entity\\": "src/entity"
+            "HowToCodeWell\\Entity\\": "src/Entity"
         }
     },
     "config": {
