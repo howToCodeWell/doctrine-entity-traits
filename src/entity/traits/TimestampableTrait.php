@@ -10,7 +10,12 @@ namespace HowToCodeWell\Entity\Traits;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Exception;
 
+/**
+ * Trait TimestampableTrait
+ * @ORM\HasLifecycleCallbacks()
+ */
 trait TimestampableTrait
 {
     /**
@@ -59,6 +64,31 @@ trait TimestampableTrait
     public function setCreationDate(DateTime $creationDate): self
     {
         $this->creationDate = $creationDate;
+
+        return $this;
+    }
+
+
+    /**
+     * @ORM\PrePersist
+     * @return self
+     * @throws Exception
+     */
+    public function prePersist(): self
+    {
+        $this->setCreationDate(new DateTime());
+
+        return $this;
+    }
+
+    /**
+     * @ORM\PreUpdate()
+     * @return self
+     * @throws Exception
+     */
+    public function preUpdate(): self
+    {
+        $this->setUpdatedDate(new DateTime());
 
         return $this;
     }
