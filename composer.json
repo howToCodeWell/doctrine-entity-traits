@@ -5,18 +5,27 @@
     "minimum-stability": "dev",
     "license": "MIT",
     "autoload": {
-      "psr-4": {
-            "HowToCodeWell\\Entity\\Traits\\": "src/entity/traits"
+        "psr-4": {
+            "HowToCodeWell\\Entity\\": "src/entity"
         }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
-        "phpstan/phpstan": "^0.12.14"
+        "phpstan/phpstan": "^0.12.14",
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
     },
     "require": {
         "php": ">=7.2",
         "ramsey/uuid": "^3.9",
         "doctrine/orm": "^2.7"
     }
-
 }
