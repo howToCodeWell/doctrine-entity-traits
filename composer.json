@@ -1,6 +1,7 @@
 {
     "name": "howtocodewell/doctrine-entity-traits",
     "type": "package",
+    "description": "Entity traits for How To Code Well",
     "version": "1.0.0",
     "minimum-stability": "dev",
     "license": "MIT",
